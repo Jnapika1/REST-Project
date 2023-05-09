@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Products List</title>
+    <style>
+        #form-div{
+            background-color: rgb(206, 215, 223);
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 1em;
+            margin: 2% 25% 2% 25%;
+        }
+        #list-div{
+            padding: 1em;
+            margin: 2% 25% 2% 25%;
+        }
+        #submit{
+            background-color: gray;
+            color: white;
+            border: none;
+            height: 2em;
+            border-radius: 3px;
+        }
+        .delete{
+            margin: 1% 2% 1% 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Add Products</h1>
+    <div id="form-div">
+        <form id="form1">
+        <label for="price" class="form-label">Selling Price :</label>
+        <input type="number" id="sp" name="price" class="form-control">
+
+        
+        <label for="product" class="form-label">Product Name :</label>
+        <input type="text" id="pname" name="product" class="form-control">
+
+        <br>
+        <input type="submit" id="submit" name="submit" value="Add Product" class="btn-primary" ><br>
+    </form>
+    </div>
+    <div id="list-div">
+        <h3>Product List</h3>
+    <ul id="list-group"></ul>
+    <p id="para"><b>Total worth of products</b> : Rs <input type="text" id="sum" value="0" style="border: none; outline: none;" readonly></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
